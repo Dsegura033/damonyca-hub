@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damonyca Segura | Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f7f4ef;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.wrapper {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Intro */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Card Style */
+.card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Titles */
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Buttons */
+a.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #d4af37;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <h1>Hi, I'm Damonyca</h1>
+
+    <p>What brings you here today?</p>
+
+    <div class="card-container">
+
+        <!-- RaeRoutes -->
+        <div class="card">
+            <div class="icon">✈️</div>
+            <h2>RaeRoutes</h2>
+            <p>Travel inspiration, planning, and trip support.</p>
+            <a class="button" href="https://raeroutes.com">
+                Explore RaeRoutes
+            </a>
+        </div>
+
+        <!-- Digital Workshop -->
+        <div class="card">
+            <div class="icon">💻</div>
+            <h2>The Digital Workshop</h2>
+            <p>Websites, social media, and digital marketing services.</p>
+            <a class="button" href="digitalworkshop.html">
+                View My Work
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
