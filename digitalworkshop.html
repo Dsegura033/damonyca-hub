@@ -15,40 +15,41 @@
 body {
     font-family: Georgia, serif;
 
-    /* ✨ soft Lightroom-style gradient */
-    background: linear-gradient(135deg, #f6f1f7, #eef6ff, #fff7fb);
+    /* 🌈 richer pastel depth (less white, more mood) */
+    background: linear-gradient(180deg, #e9ddf5 0%, #dfefff 50%, #fbe7f0 100%);
     background-attachment: fixed;
 
-    color: #2f2f2f;
+    color: #2b2b2b;
     line-height: 1.6;
 }
 
-/* HEADER (glass effect) */
+/* HEADER */
 
 header {
     text-align: center;
-    padding: 55px 20px;
+    padding: 60px 20px;
 
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(12px);
+    /* softer tinted glass (less white) */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
 
     border-bottom: 1px solid rgba(205, 180, 219, 0.25);
 }
 
 header h1 {
-    font-size: 2.6rem;
+    font-size: 2.7rem;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
 
 header p {
-    color: #666;
+    color: #555;
 }
 
 /* SECTIONS */
 
 section {
-    padding: 75px 20px;
+    padding: 85px 20px;
 }
 
 .container {
@@ -63,9 +64,9 @@ section {
 }
 
 .about p {
-    max-width: 750px;
+    max-width: 760px;
     margin: 20px auto 0;
-    font-size: 1.08rem;
+    font-size: 1.1rem;
     color: #444;
 }
 
@@ -74,22 +75,22 @@ section {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 28px;
     margin-top: 40px;
 }
 
 .service-card {
 
-    /* ✨ glass card effect */
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
+    /* deeper glass = less “white box” feel */
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
 
-    padding: 35px 25px;
-    border-radius: 18px;
+    padding: 38px 25px;
+    border-radius: 20px;
 
-    border: 1px solid rgba(205, 180, 219, 0.2);
+    border: 1px solid rgba(205, 180, 219, 0.25);
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 
     text-align: center;
 
@@ -97,54 +98,62 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.1);
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO GRID */
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 32px;
     margin-top: 40px;
 }
 
 /* PROJECT CARD */
 
 .project {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(14px);
 
-    border-radius: 20px;
+    border-radius: 22px;
     overflow: hidden;
 
-    border: 1px solid rgba(205, 180, 219, 0.2);
+    border: 1px solid rgba(205, 180, 219, 0.25);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 
     transition: 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 /* IMAGE */
 
 .project-img img {
     width: 100%;
-    height: 230px;
+    height: 240px;
     object-fit: cover;
     display: block;
 
-    filter: saturate(1.05) contrast(1.05);
+    /* ✨ softer “edited” Lightroom feel */
+    filter: saturate(1.1) contrast(1.05) brightness(0.98);
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.project-img img:hover {
+    transform: scale(1.02);
 }
 
 /* CONTENT */
 
 .project-content {
-    padding: 22px;
+    padding: 24px;
 }
 
 .project-content h3 {
@@ -159,30 +168,30 @@ section {
 /* CONTACT */
 
 .contact-box {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(14px);
 
-    padding: 45px;
-    border-radius: 18px;
+    padding: 48px;
+    border-radius: 22px;
 
-    border: 1px solid rgba(205, 180, 219, 0.2);
+    border: 1px solid rgba(205, 180, 219, 0.25);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 
     max-width: 650px;
     margin: 30px auto 0;
     text-align: center;
 }
 
-/* BUTTON (soft gradient pastel) */
+/* BUTTON */
 
 a.button {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 24px;
+    padding: 13px 26px;
 
-    background: linear-gradient(135deg, #cdb4db, #bde0fe);
-    color: #2f2f2f;
+    background: linear-gradient(135deg, #cdb4db, #bde0fe, #ffc8dd);
+    color: #2b2b2b;
 
     text-decoration: none;
     border-radius: 30px;
@@ -193,18 +202,43 @@ a.button {
 }
 
 a.button:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 
 /* FOOTER */
 
 footer {
     text-align: center;
-    padding: 25px;
-    background: #1f1f1f;
+    padding: 28px;
+    background: #1a1a1a;
     color: white;
     font-size: 0.9rem;
 }
+
+/* LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 14px;
+}
+    
 </style>
 </head>
 
@@ -263,7 +297,7 @@ footer {
             <div class="project">
 
                 <div class="project-img">
-                    <img src="images/tphomepage.png" alt="Taylor Plumbing Homepage">
+                    <img src="images/tphomepage.png" alt="Taylor Plumbing Homepage" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-content">
@@ -272,11 +306,11 @@ footer {
                 </div>
 
                 <div class="project-img">
-                    <img src="images/tpserivceabout.png" alt="Taylor Plumbing Services Section">
+                    <img src="images/tpserivceabout.png" alt="Taylor Plumbing Services Section" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-img">
-                    <img src="images/tpmobile.png" alt="Taylor Plumbing Mobile View">
+                    <img src="images/tpmobile.png" alt="Taylor Plumbing Mobile View" onclick="openModal(this.src)">
                 </div>
 
             </div>
@@ -285,7 +319,7 @@ footer {
             <div class="project">
 
                 <div class="project-img">
-                    <img src="images/wbmobile.png" alt="Wildflower Boutique mobile">
+                    <img src="images/wbmobile.png" alt="Wildflower Boutique mobile" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-content">
@@ -294,11 +328,11 @@ footer {
                 </div>
 
                 <div class="project-img">
-                    <img src="images/wbcollection.png" alt="Wildflower Boutique Section">
+                    <img src="images/wbcollection.png" alt="Wildflower Boutique Section" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-img">
-                    <img src="images/wborder.png" alt="Wildflower Boutique order service">
+                    <img src="images/wborder.png" alt="Wildflower Boutique order service" onclick="openModal(this.src)">
                 </div>
 
             </div>
@@ -307,7 +341,7 @@ footer {
             <div class="project">
 
                 <div class="project-img">
-                    <img src="images/raeroutesmobile.png" alt="RaeRoutes mobile">
+                    <img src="images/raeroutesmobile.png" alt="RaeRoutes mobile" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-content">
@@ -316,11 +350,11 @@ footer {
                 </div>
 
                 <div class="project-img">
-                    <img src="images/rrhub.png" alt="RaeRoutes Interactive hub">
+                    <img src="images/rrhub.png" alt="RaeRoutes Interactive hub" onclick="openModal(this.src)">
                 </div>
 
                 <div class="project-img">
-                    <img src="images/rrcollection.png" alt="RaeRoutes collection">
+                    <img src="images/rrcollection.png" alt="RaeRoutes collection" onclick="openModal(this.src)">
                 </div>
 
             </div>
@@ -340,7 +374,7 @@ footer {
             reach out and let’s build something together.
         </p>
 
-        <a class="button" href="mailto:your@email.com">
+        <a class="button" href="mailto:damonyca@gmail.com">
             Email Me
         </a>
 
@@ -350,6 +384,21 @@ footer {
 <footer>
     © 2026 The Digital Workshop | Damonyca Segura
 </footer>
+    
+    <div id="lightbox" class="lightbox" onclick="closeModal()">
+    <img id="lightbox-img">
+</div>
+
+    <script>
+function openModal(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeModal() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
