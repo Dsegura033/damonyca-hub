@@ -58,7 +58,7 @@ p {
     gap: 30px;
 }
 
-/* ✨ GLASS CARDS (BIG UPGRADE HERE) */
+/* ✨ GLASS CARDS */
 
 .card {
     background: rgba(255, 255, 255, 0.45);
@@ -75,6 +75,8 @@ p {
 
     position: relative;
     overflow: hidden;
+
+    z-index: 1; /* IMPORTANT: keeps content above background glow */
 }
 
 .card:hover {
@@ -82,7 +84,8 @@ p {
     box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* subtle glow effect */
+/* ✨ SAFE GLOW EFFECT (does NOT block clicks) */
+
 .card::before {
     content: "";
     position: absolute;
@@ -90,8 +93,18 @@ p {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(205,180,219,0.15), transparent 60%);
+
+    background: radial-gradient(circle, rgba(205,180,219,0.18), transparent 60%);
     transform: rotate(25deg);
+
+    z-index: 0;
+    pointer-events: none; /* 🔥 THIS FIXES YOUR CLICK ISSUE */
+}
+
+/* make sure content is above glow */
+.card > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* ICONS */
@@ -107,6 +120,8 @@ p {
     margin-bottom: 10px;
     font-size: 1.4rem;
 }
+
+/* TEXT */
 
 .card p {
     font-size: 0.95rem;
@@ -129,6 +144,9 @@ a.button {
     font-weight: bold;
 
     transition: 0.3s ease;
+
+    position: relative;
+    z-index: 3; /* extra safety for clicks */
 }
 
 a.button:hover {
