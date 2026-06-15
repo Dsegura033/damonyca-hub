@@ -343,6 +343,48 @@ a.button {
 a.button:hover {
     transform: translateY(-2px);
 }
+    /* CTA TEXT HIERARCHY */
+.contact-box h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* SOFT DIVIDER (for quote section separation) */
+.cta-divider {
+    width: 60%;
+    height: 1px;
+    margin: 25px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(205,180,219,0.5),
+        transparent
+    );
+}
+
+/* OPTIONAL: subtle glow for CTA box */
+.contact-box {
+    position: relative;
+    overflow: hidden;
+}
+
+/* soft “light leak” effect */
+.contact-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+
+    background: radial-gradient(circle, rgba(189,224,254,0.12), transparent 60%);
+    transform: rotate(20deg);
+
+    pointer-events: none;
+}
 
 
 /* FOOTER */
@@ -557,36 +599,26 @@ footer {
     </div>
 </section>
     
-   <!-- QUOTES -->
-<section>
-    <div class="container contact-box">
-
-        <h2>Need a Quote?</h2>
-
-        <p>
-            Services can be customized to fit your business goals, timeline, and level of support needed. From website design and maintenance to social media and digital solutions, I offer flexible options designed around your project.
-        </p>
-
-        <p>
-            Reach out with a few details about your business and I'll be happy to provide a personalized quote.
-        </p>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
+  <!-- CTA / CONTACT -->
 <section>
     <div class="container contact-box">
 
         <h2>Let’s Work Together</h2>
 
         <p>
-            If you need a website, social media help, or digital support,
-            reach out and let’s build something together.
+            If you need a website, social media support, or digital help, I can build a solution that fits your business goals and style.
+        </p>
+
+        <div class="cta-divider"></div>
+
+        <h3>Need a Quote?</h3>
+
+        <p>
+            Every project is different. Share a few details about your business and I’ll put together a custom quote based on what you need.
         </p>
 
         <a class="button" href="mailto:damonyca@gmail.com">
-            Email Me
+            Request a Quote
         </a>
 
     </div>
