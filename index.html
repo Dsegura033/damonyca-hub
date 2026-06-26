@@ -6,17 +6,26 @@
 <title>Damonyca Segura | Hub</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
+
     font-family: Georgia, serif;
 
     /* 🌈 dreamy pastel background */
-    background: linear-gradient(180deg, #e9ddf5, #dfefff, #fbe7f0);
+    background: linear-gradient(
+        180deg,
+        #e9ddf5,
+        #dfefff,
+        #fbe7f0
+    );
+
     background-attachment: fixed;
 
     color: #2b2b2b;
@@ -24,146 +33,345 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
 }
+
 
 /* MAIN WRAPPER */
 
 .wrapper {
+
     max-width: 950px;
     width: 100%;
+
     text-align: center;
-    padding: 50px 20px;
+
+    padding: 60px 20px;
+
 }
 
-/* INTRO TEXT */
+
+/* HEADER */
 
 h1 {
+
     font-size: 2.7rem;
+
     margin-bottom: 10px;
+
     letter-spacing: 0.5px;
+
 }
 
-p {
-    font-size: 1.15rem;
-    margin-bottom: 45px;
-    color: #555;
+
+/* little dreamy divider */
+
+h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 85px;
+    height: 2px;
+
+    margin: 18px auto 0;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #cdb4db,
+        transparent
+    );
+
 }
+
+
+/* INTRO */
+
+.wrapper > p {
+
+    font-size: 1.15rem;
+
+    margin-top: 18px;
+    margin-bottom: 45px;
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
 
 /* CARD GRID */
 
 .card-container {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 30px;
+
 }
+
+
 
 /* ✨ GLASS CARDS */
 
 .card {
-    background: rgba(255, 255, 255, 0.45);
+
+    background: rgba(255,255,255,0.45);
+
     backdrop-filter: blur(14px);
 
-    padding: 45px 30px;
+
+    padding: 50px 35px;
+
     border-radius: 22px;
 
-    border: 1px solid rgba(205, 180, 219, 0.25);
 
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(205,180,219,0.25);
+
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.08);
+
 
     transition: 0.3s ease;
 
+
     position: relative;
+
     overflow: hidden;
 
-    z-index: 1; /* IMPORTANT: keeps content above background glow */
+    z-index: 1;
+
 }
+
+
 
 .card:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+
 }
 
-/* ✨ SAFE GLOW EFFECT (does NOT block clicks) */
+
+
+/* glow */
 
 .card::before {
+
     content: "";
+
     position: absolute;
+
+
     top: -50%;
     left: -50%;
+
+
     width: 200%;
     height: 200%;
 
-    background: radial-gradient(circle, rgba(205,180,219,0.18), transparent 60%);
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(205,180,219,0.18),
+        transparent 60%
+    );
+
+
     transform: rotate(25deg);
 
+
     z-index: 0;
-    pointer-events: none; /* 🔥 THIS FIXES YOUR CLICK ISSUE */
+
+    pointer-events: none;
+
 }
 
-/* make sure content is above glow */
+
+
+
 .card > * {
+
     position: relative;
+
     z-index: 2;
+
 }
+
+
 
 /* ICONS */
 
 .icon {
+
     font-size: 2.8rem;
+
     margin-bottom: 15px;
+
 }
+
+
 
 /* TITLES */
 
 .card h2 {
-    margin-bottom: 10px;
-    font-size: 1.4rem;
+
+    margin-bottom: 6px;
+
+    font-size: 1.45rem;
+
 }
 
-/* TEXT */
+
+
+/* SUB TITLES */
+
+.card h3 {
+
+    font-size: 1rem;
+
+    font-weight: normal;
+
+    color: #777;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* CARD TEXT */
 
 .card p {
+
     font-size: 0.95rem;
-    margin-bottom: 22px;
+
+    margin-bottom: 25px;
+
     color: #555;
+
+    line-height: 1.7;
+
 }
+
+
 
 /* BUTTONS */
 
 a.button {
+
     display: inline-block;
+
     padding: 12px 24px;
 
-    background: linear-gradient(135deg, #cdb4db, #bde0fe, #ffc8dd);
+
+    background:
+    linear-gradient(
+        135deg,
+        #cdb4db,
+        #bde0fe,
+        #ffc8dd
+    );
+
+
     color: #2b2b2b;
 
+
     text-decoration: none;
+
     border-radius: 30px;
+
 
     font-weight: bold;
 
+
     transition: 0.3s ease;
 
+
     position: relative;
-    z-index: 3; /* extra safety for clicks */
+
+    z-index: 3;
+
 }
 
+
+
 a.button:hover {
+
     transform: scale(1.06);
+
 }
+
+
+
+
+/* FOOTER */
+
+.hub-footer {
+
+    margin-top: 60px;
+
+
+    font-size: 0.85rem;
+
+    color: #666;
+
+
+    line-height: 1.8;
+
+}
+
+
+
 
 /* RESPONSIVE */
 
-@media (max-width: 700px) {
-    .card-container {
-        grid-template-columns: 1fr;
+@media (max-width:700px) {
+
+
+    .wrapper {
+
+        padding: 40px 20px;
+
     }
 
-    h1 {
-        font-size: 2.2rem;
+
+
+    .card-container {
+
+        grid-template-columns: 1fr;
+
     }
+
+
+
+    h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+
+    .card {
+
+        padding: 40px 25px;
+
+    }
+
 }
+
 </style>
 </head>
 
@@ -171,33 +379,64 @@ a.button:hover {
 
 <div class="wrapper">
 
-    <h1>Hi, I'm Damonyca</h1>
+    <h1>Hi, I'm Damonyca ✨</h1>
 
-    <p>What brings you here today?</p>
+    <p class="intro-text">
+        Welcome to my creative corner of the internet.<br>
+        Choose your path below:
+    </p>
+
 
     <div class="card-container">
 
         <!-- RaeRoutes -->
         <div class="card">
+
             <div class="icon">✈️</div>
-            <h2>RaeRoutes</h2>
-            <p>Travel inspiration, planning, and trip support.</p>
+
+            <h2>Travel Adventures</h2>
+
+            <h3>RaeRoutes</h3>
+
+            <p>
+                Travel inspiration, trip planning, and support designed to make every journey easier.
+            </p>
+
             <a class="button" href="https://raeroutes.com">
-                Explore RaeRoutes
+               ✨ Explore RaeRoutes
             </a>
+
         </div>
+
 
         <!-- Digital Workshop -->
         <div class="card">
+
             <div class="icon">💻</div>
-            <h2>The Digital Workshop</h2>
-            <p>Websites, social media, and digital marketing services.</p>
+
+            <h2>Digital Creativity</h2>
+
+            <h3>The Digital Workshop</h3>
+
+            <p>
+                Websites, social media support, and digital solutions for small businesses.
+            </p>
+
             <a class="button" href="digitalworkshop.html">
-                View My Work
+                ✨ Discover My Digital Work
             </a>
+
         </div>
 
+
     </div>
+
+
+    <footer class="hub-footer">
+        © 2026 Damonyca Segura<br>
+        Travel • Design • Digital Creativity
+    </footer>
+
 
 </div>
 
