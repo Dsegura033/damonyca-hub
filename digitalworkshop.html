@@ -1270,62 +1270,53 @@ onclick="closeModal()">
 
 <script>
 
-// accordion
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll(".project-toggle")
-.forEach(button => {
+    document.querySelectorAll(".project-toggle")
+    .forEach(button => {
 
-button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
-const item = button.parentElement;
-
-
-// close other projects
-
-document.querySelectorAll(".project-item")
-.forEach(project => {
-
-if(project !== item){
-
-project.classList.remove("active");
-
-}
-
-});
+            const item = button.closest(".project-item");
 
 
-// open clicked one
+            document.querySelectorAll(".project-item")
+            .forEach(project => {
 
-item.classList.toggle("active");
+                if(project !== item){
+                    project.classList.remove("active");
+                }
 
+            });
+
+
+            item.classList.toggle("active");
+
+
+        });
+
+    });
 
 });
-
-});
-
 
 
 // lightbox
 
 function openModal(src){
 
-document.getElementById("lightbox").style.display="flex";
+    document.getElementById("lightbox").style.display="flex";
 
-document.getElementById("lightbox-img").src=src;
+    document.getElementById("lightbox-img").src=src;
 
 }
-
 
 
 function closeModal(){
 
-document.getElementById("lightbox").style.display="none";
+    document.getElementById("lightbox").style.display="none";
 
 }
 
-
 </script>
-
-
 </body>
 </html>
