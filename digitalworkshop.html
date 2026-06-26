@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+    
+    html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -70,39 +75,31 @@ section {
 .workshop-nav {
 
     position: sticky;
-    top: 20px;
+    top: 15px;
 
-    z-index: 1000;
+    z-index: 9999;
 
     max-width: 950px;
-
-    margin: 20px auto 0;
+    margin: 20px auto;
 
     padding: 14px 25px;
-
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-
-    background: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.45);
 
     backdrop-filter: blur(16px);
 
-
     border-radius: 30px;
 
-
-    border: 1px solid rgba(205,180,219,0.3);
-
+    border: 1px solid rgba(205,180,219,0.35);
 
     box-shadow:
     0 10px 25px rgba(0,0,0,0.08);
 
-
 }
-
 
 /* HUB BUTTON */
 
@@ -850,119 +847,158 @@ footer {
     <h1>The Digital Workshop</h1>
     <p>Websites • Social Media • Digital Solutions</p>
 </header>
-    
-    <nav class="workshop-nav">
-
-<a href="index.html" class="hub-link">
-← Hub
-</a>
 
 
-<div class="nav-links">
+<nav class="workshop-nav">
 
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#projects">Work</a>
-<a href="#contact">Contact</a>
+    <a href="index.html" class="hub-link">
+        ← Hub
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-section">
+
+
+<div class="about-image">
+
+<img src="images/IMG_9674.jpeg" alt="Damonyca Segura">
 
 </div>
 
 
-</nav>
 
-<section>
-    <div class="container about-section">
+<div class="about-content">
 
-        <div class="about-image">
-            <img src="images/IMG_9674.jpeg" alt="Damonyca Segura">
-        </div>
+<h2>About Me</h2>
 
-        <div class="about-content">
 
-            <h2>About Me</h2>
+<p>
+Hi, I’m Damonyca. I’m a self-taught web designer and digital creator with a background in Applied Technology, focused on helping small businesses build a stronger and more intentional online presence.
+</p>
 
-            <p>
-                Hi, I’m Damonyca. I’m a self-taught web designer and digital creator with a background in Applied Technology, focused on helping small businesses build a stronger and more intentional online presence.
-            </p>
 
-            <p>
-                I specialize in clean, modern websites and simple digital systems that help businesses feel more organized, professional, and easy to navigate online. I also support social media content and branding so everything feels consistent across platforms.
-            </p>
+<p>
+I specialize in clean, modern websites and simple digital systems that help businesses feel more organized, professional, and easy to navigate online.
+</p>
 
-            <p>
-                My approach is simple: keep things clear, functional, and visually appealing without overcomplicating the process. I believe every small business deserves a website that actually works for them, not against them.
-            </p>
 
-            <p>
-                The Digital Workshop is where I bring all of that together! Combining design, structure, and strategy to help ideas turn into real, usable websites.
-            </p>
+<p>
+I also support social media content and branding so everything feels consistent across platforms.
+</p>
 
-        </div>
 
-    </div>
+<p>
+The Digital Workshop combines design, structure, and strategy to help ideas turn into real, usable websites.
+</p>
+
+
+</div>
+
+
+</div>
+
 </section>
+
+
+
+
 <!-- SERVICES -->
-<section>
-    <div class="container">
 
-        <h2 style="text-align:center;">Services</h2>
-
-        <p style="text-align:center; max-width:700px; margin:15px auto 40px;">
-            Helping small businesses build a stronger online presence through websites, content, and digital support tailored to their goals.
-        </p>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <h3>💻 Website Design</h3>
-                <p>Custom, mobile friendly websites designed to showcase your business and connect with customers.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>🔧 Website Maintenance</h3>
-                <p>Updates, edits, content changes, and ongoing support to keep your website running smoothly.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>📱 Social Media Support</h3>
-                <p>Content planning, graphics, captions, and brand consistency across platforms.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>📅 Content Planning</h3>
-                <p>Content calendars and posting strategies designed to keep your business visible and organized.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>📈 Digital Solutions</h3>
-                <p>Practical digital support that helps businesses improve their online presence and customer experience.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>🎨 Branding Support</h3>
-                <p>Helping businesses create a cohesive and professional look across their website and online platforms.</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-    
-
-<!-- PORTFOLIO -->
-<section id="projects">
+<section id="services">
 
 <div class="container">
 
-<h2 style="text-align:center;">
-    Featured Projects
-</h2>
+
+<h2>Services</h2>
+
+
+<p style="text-align:center; max-width:700px; margin:auto;">
+Helping small businesses build a stronger online presence through websites, content, and digital support.
+</p>
+
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+<h3>💻 Website Design</h3>
+<p>Custom, mobile-friendly websites designed to showcase your business and connect with customers.</p>
+</div>
+
+
+<div class="service-card">
+<h3>🔧 Website Maintenance</h3>
+<p>Updates, edits, and support to keep your website running smoothly.</p>
+</div>
+
+
+<div class="service-card">
+<h3>📱 Social Media Support</h3>
+<p>Content planning, graphics, captions, and brand consistency.</p>
+</div>
+
+
+<div class="service-card">
+<h3>📅 Content Planning</h3>
+<p>Posting strategies and calendars to keep your business visible.</p>
+</div>
+
+
+<div class="service-card">
+<h3>📈 Digital Solutions</h3>
+<p>Practical digital improvements that support your business goals.</p>
+</div>
+
+
+<div class="service-card">
+<h3>🎨 Branding Support</h3>
+<p>Helping create a cohesive look across your online platforms.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+
+<div class="container">
+
+
+<h2>Featured Projects</h2>
+
 
 
 <div class="project-list">
 
 
-<!-- TAYLOR PLUMBING -->
+
+<!-- TAYLOR -->
 
 <div class="project-item">
 
@@ -976,12 +1012,11 @@ Taylor Septic & Plumbing Design
 </button>
 
 
-
 <div class="project-details">
 
 
 <p>
-A local Plumbing service business website focused on clean layout, mobile usability, and making information easy for customers to find.
+Local service business website focused on clean layout, mobile usability, and simple navigation.
 </p>
 
 
@@ -989,23 +1024,15 @@ A local Plumbing service business website focused on clean layout, mobile usabil
 <div class="project-gallery">
 
 
-<img 
-src="images/tphomepage.png"
-alt="Taylor Plumbing Homepage"
+<img src="images/tphomepage.png"
 onclick="openModal(this.src)">
 
 
-
-<img 
-src="images/tpserivceabout.png"
-alt="Taylor Plumbing Services"
+<img src="images/tpserivceabout.png"
 onclick="openModal(this.src)">
 
 
-
-<img 
-src="images/tpmobile.png"
-alt="Taylor Plumbing Mobile View"
+<img src="images/tpmobile.png"
 onclick="openModal(this.src)">
 
 
@@ -1020,6 +1047,7 @@ Website Design
 </div>
 
 </div>
+
 
 
 
@@ -1043,31 +1071,24 @@ Wildflower Boutique
 
 
 <p>
-A Fictional boutique website concept focused on branding, product presentation, and creating a smooth customer experience.
+Fictional boutique concept focused on branding, product presentation, and customer experience.
 </p>
-
 
 
 <div class="project-gallery">
 
 
-<img
-src="images/wbmobile.png"
-alt="Wildflower Boutique Mobile"
+<img src="images/wbmobile.png"
 onclick="openModal(this.src)">
 
 
 
-<img
-src="images/wbcollection.png"
-alt="Wildflower Boutique Collection"
+<img src="images/wbcollection.png"
 onclick="openModal(this.src)">
 
 
 
-<img
-src="images/wborder.png"
-alt="Wildflower Boutique Order"
+<img src="images/wborder.png"
 onclick="openModal(this.src)">
 
 
@@ -1082,6 +1103,7 @@ Brand + Website Concept
 
 </div>
 
+
 </div>
 
 
@@ -1090,6 +1112,7 @@ Brand + Website Concept
 
 
 <!-- RAE ROUTES -->
+
 
 <div class="project-item">
 
@@ -1104,43 +1127,34 @@ RaeRoutes
 
 
 
-
 <div class="project-details">
 
 
 <p>
-A custom travel website featuring destination collections, interactive content, travel inspiration, and a branded user experience.
+Custom travel website featuring destination collections, interactive content, and a branded user experience.
 </p>
-
 
 
 
 <div class="project-gallery">
 
 
-<img
-src="images/raeroutesmobile.png"
-alt="RaeRoutes Mobile"
+<img src="images/raeroutesmobile.png"
 onclick="openModal(this.src)">
 
 
 
-<img
-src="images/rrhub.png"
-alt="RaeRoutes Hub"
+<img src="images/rrhub.png"
 onclick="openModal(this.src)">
 
 
 
-<img
-src="images/rrcollection.png"
-alt="RaeRoutes Collections"
+<img src="images/rrcollection.png"
 onclick="openModal(this.src)">
 
 
 
 </div>
-
 
 
 
@@ -1163,60 +1177,159 @@ Visit Live Site
 
 </div>
 
+
+</div>
+
+
+
+
 </div>
 
 
 </div>
 
-</div>
 
 </section>
-    
-    
-  <!-- CTA / CONTACT -->
-<section>
-    <div class="container contact-box">
 
-        <h2>Let’s Work Together</h2>
 
-        <p>
-            If you need a website, social media support, or digital help, I can build a solution that fits your business goals and style.
-        </p>
 
-        <div class="cta-divider"></div>
 
-        <h3>Need a Quote?</h3>
 
-        <p>
-            Every project is different. Share a few details about your business and I’ll put together a custom quote based on what you need.
-        </p>
 
-        <a class="button" href="mailto:thedigitalworkshop1@gmail.com">
-            Request Services
-        </a>
+<!-- CONTACT -->
 
-    </div>
+<section id="contact">
+
+
+<div class="container contact-box">
+
+
+<h2>Let’s Work Together</h2>
+
+
+<p>
+Need a website, social media support, or digital help? I can create a solution that fits your goals.
+</p>
+
+
+<div class="cta-divider"></div>
+
+
+
+<h3>Need a Quote?</h3>
+
+
+<p>
+Every project is different. Send over your ideas and I’ll create a custom plan.
+</p>
+
+
+
+<a class="button"
+href="mailto:thedigitalworkshop1@gmail.com">
+
+Request Services
+
+</a>
+
+
+</div>
+
+
 </section>
+
+
+
+
 
 <footer>
-    © 2026 The Digital Workshop | Damonyca Segura
+
+© 2026 The Digital Workshop | Damonyca Segura
+
 </footer>
-    
-    
-    <div id="lightbox" class="lightbox" onclick="closeModal()">
-    <img id="lightbox-img">
+
+
+
+
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox"
+class="lightbox"
+onclick="closeModal()">
+
+
+<img id="lightbox-img">
+
+
 </div>
 
-    <script>
-function openModal(src) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = src;
+
+
+
+
+<script>
+
+
+<script>
+
+// accordion
+
+document.querySelectorAll(".project-toggle")
+.forEach(button => {
+
+button.addEventListener("click", () => {
+
+
+const item = button.parentElement;
+
+
+// close other projects
+
+document.querySelectorAll(".project-item")
+.forEach(project => {
+
+if(project !== item){
+
+project.classList.remove("active");
+
 }
 
-function closeModal() {
-    document.getElementById("lightbox").style.display = "none";
+});
+
+
+// open clicked one
+
+item.classList.toggle("active");
+
+
+});
+
+});
+
+
+
+// lightbox
+
+function openModal(src){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightbox-img").src=src;
+
 }
+
+
+
+function closeModal(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+
 </script>
+
 
 </body>
 </html>
