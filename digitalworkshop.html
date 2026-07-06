@@ -718,8 +718,9 @@ section {
 
 }
     
-
-/* CONTACT */
+/* =========================
+   CONTACT SECTION
+========================= */
 
 .contact-box {
     background: rgba(255, 255, 255, 0.45);
@@ -730,14 +731,71 @@ section {
 
     border: 1px solid rgba(205, 180, 219, 0.25);
 
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.08),
+        0 0 40px rgba(189,224,254,0.12);
 
     max-width: 650px;
     margin: 30px auto 0;
     text-align: center;
+
+    position: relative;
+    overflow: hidden;
 }
 
-/* BUTTON */
+/* soft light glow overlay */
+.contact-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+
+    background: radial-gradient(circle, rgba(189,224,254,0.12), transparent 60%);
+    transform: rotate(20deg);
+
+    pointer-events: none;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.contact-box h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.contact-note {
+    font-size: 0.85rem;
+    color: rgba(60, 60, 60, 0.7);
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.cta-divider {
+    width: 60%;
+    height: 1px;
+    margin: 25px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(205,180,219,0.5),
+        transparent
+    );
+}
+
+/* =========================
+   BUTTON BASE
+========================= */
 
 a.button {
     display: inline-block;
@@ -755,54 +813,51 @@ a.button {
     box-shadow: 0 8px 20px rgba(205,180,219,0.25);
 
     transition: all 0.3s ease;
+    will-change: transform;
 }
 
+/* base hover */
 a.button:hover {
     transform: translateY(-2px);
 }
-    /* CTA TEXT HIERARCHY */
-.contact-box h3 {
-    margin-top: 18px;
-    margin-bottom: 10px;
-    font-size: 1.25rem;
+
+/* spacing between buttons */
+a.button + a.button {
+    margin-top: 12px;
+}
+
+/* =========================
+   PRIMARY CTA (JOTFORM)
+========================= */
+
+a.button.primary-cta {
+    background: linear-gradient(135deg, #bde0fe, #cdb4db, #ffc8dd);
+    box-shadow: 0 10px 25px rgba(189,224,254,0.35);
+}
+
+a.button.primary-cta:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 14px 30px rgba(189,224,254,0.45);
+}
+
+/* =========================
+   SECONDARY CTA (EMAIL)
+========================= */
+
+a.button.secondary-cta {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(205, 180, 219, 0.4);
     color: #333;
+
+    box-shadow: none;
+    backdrop-filter: blur(10px);
 }
 
-/* SOFT DIVIDER (for quote section separation) */
-.cta-divider {
-    width: 60%;
-    height: 1px;
-    margin: 25px auto;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(205,180,219,0.5),
-        transparent
-    );
+a.button.secondary-cta:hover {
+    background: rgba(255, 255, 255, 0.55);
+    transform: translateY(-2px);
 }
-
-/* OPTIONAL: subtle glow for CTA box */
-.contact-box {
-    position: relative;
-    overflow: hidden;
-}
-
-/* soft “light leak” effect */
-.contact-box::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-
-    background: radial-gradient(circle, rgba(189,224,254,0.12), transparent 60%);
-    transform: rotate(20deg);
-
-    pointer-events: none;
-}
-
+    
 
 /* FOOTER */
 
@@ -1200,41 +1255,40 @@ Visit Live Site
 
 <section id="contact">
 
+  <div class="container contact-box">
 
-<div class="container contact-box">
+    <h2>Let’s Work Together</h2>
 
+    <p>
+      Need a website, social media support, or digital help? I create custom solutions based on your goals and brand.
+    </p>
 
-<h2>Let’s Work Together</h2>
+    <div class="cta-divider"></div>
 
+    <h3>Request a Quote</h3>
 
-<p>
-Need a website, social media support, or digital help? I can create a solution that fits your goals.
-</p>
+    <p>
+      Every project is different. Share your ideas and I’ll build a custom plan tailored to your needs.
+    </p>
 
+    <!-- PRIMARY CTA (JOTFORM) -->
+    <a class="button primary-cta"
+       href="https://form.jotform.com/261854913472059"
+       target="_blank">
+      Fill Out Inquiry Form
+    </a>
 
-<div class="cta-divider"></div>
+    <p class="contact-note">
+      Takes about 2–3 minutes • I’ll respond within 24–48 hours
+    </p>
 
+    <!-- SECONDARY CTA (EMAIL) -->
+    <a class="button secondary-cta"
+       href="mailto:thedigitalworkshop1@gmail.com">
+      Or Email Me Directly
+    </a>
 
-
-<h3>Need a Quote?</h3>
-
-
-<p>
-Every project is different. Send over your ideas and I’ll create a custom plan.
-</p>
-
-
-
-<a class="button"
-href="mailto:thedigitalworkshop1@gmail.com">
-
-Request Services
-
-</a>
-
-
-</div>
-
+  </div>
 
 </section>
 
