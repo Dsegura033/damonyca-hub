@@ -741,7 +741,8 @@ section {
         0 12px 30px rgba(0,0,0,0.08),
         0 0 40px rgba(189,224,254,0.12);
 
-    max-width: 650px;
+    max-width: 1000px;
+    width: 90%;
     margin: 30px auto 0;
     text-align: center;
 
@@ -862,6 +863,48 @@ a.button.secondary-cta {
 a.button.secondary-cta:hover {
     background: rgba(255, 255, 255, 0.55);
     transform: translateY(-2px);
+}
+    /* =========================
+   CONTACT OPTIONS
+========================= */
+
+.contact-options{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,.35);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(205,180,219,.25);
+    border-radius:18px;
+
+    padding:32px 28px;
+
+    transition:.3s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.06),
+        0 0 25px rgba(189,224,254,.10);
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.10),
+        0 0 35px rgba(189,224,254,.15);
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    margin-bottom:22px;
+    line-height:1.7;
 }
     
 
@@ -1170,7 +1213,52 @@ Brand + Website Concept
 
 
 </div>
+    
 
+    <!-- LUNA NOIR -->
+
+<div class="project-item">
+
+    <button class="project-toggle">
+
+        Luna Noir (FICTIONAL Music Artist Concept)
+
+        <span>+</span>
+
+    </button>
+
+    <div class="project-details">
+
+        <p>
+            Luxury music artist concept featuring cinematic visuals, immersive storytelling, and a bold dark aesthetic designed to showcase branding and creative web design.
+        </p>
+
+        <div class="project-gallery">
+
+            <img src="images/LN1.png"
+            onclick="openModal(this.src)">
+
+            <img src="images/LN2.png"
+            onclick="openModal(this.src)">
+
+            <img src="images/LN3.png"
+            onclick="openModal(this.src)">
+
+            <img src="images/LN4.png"
+            onclick="openModal(this.src)">
+
+             <img src="images/mobilefriendlyLN.png"
+            onclick="openModal(this.src)">
+
+        </div>
+
+        <span class="project-label">
+            Music Artist Website Concept
+        </span>
+
+    </div>
+
+</div>
 
 
 
@@ -1262,45 +1350,56 @@ Visit Live Site
 
 <section id="contact">
 
-  <div class="container contact-box">
+    <div class="container contact-box">
 
-    <h2>Let's Work Together</h2>
+        <h2>Let's Work Together</h2>
 
-    <p>
-      Every business is different, and so is every project. Share your ideas below, and let's create a digital solution that fits your goals.
-    </p>
+        <p>
+            Every business is different, and so is every project. Share your ideas, ask questions, or request a custom quote. I'd love to hear what you're creating.
+        </p>
 
-    <div class="cta-divider"></div>
+        <div class="cta-divider"></div>
 
-    <h3>Request a Quote</h3>
+        <div class="contact-options">
 
-    <p>
-      Tell me a little about your project using the inquiry form below. The more details you share, the better I can prepare a personalized quote for you.
-    </p>
+            <!-- QUOTE -->
 
-    <p class="contact-note">
-      Most inquiries receive a response within <strong>24–48 business hours.</strong>
-    </p>
+            <div class="contact-card">
 
-    <!-- EMBEDDED JOTFORM -->
-    <iframe
-      src="https://form.jotform.com/261854913472059"
-      width="100%"
-      height="850"
-      frameborder="0"
-      style="border: none; border-radius: 12px;">
-    </iframe>
+                <h3>Request a Quote</h3>
 
-    <p class="contact-note">
-      Prefer to reach out directly? Feel free to send me an email anytime.
-    </p>
+                <p>
+                    Ready to start your project? Complete the inquiry form with a few details about your business and goals. I'll review everything and get back to you within 24–48 business hours.
+                </p>
 
-    <a class="button secondary-cta"
-       href="mailto:thedigitalworkshop1@gmail.com">
-      Email The Digital Workshop
-    </a>
+                <a class="button"
+                   href="https://form.jotform.com/261854913472059"
+                   target="_blank">
+                    Open Inquiry Form
+                </a>
 
-  </div>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <h3>Email Me</h3>
+
+                <p>
+                    Have a quick question or just want to connect? Feel free to send me an email anytime, and I'll be happy to help.
+                </p>
+
+                <a class="button secondary-cta"
+                   href="mailto:thedigitalworkshop1@gmail.com">
+                    thedigitalworkshop1@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
