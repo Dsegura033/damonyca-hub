@@ -1346,7 +1346,7 @@ Visit Live Site
 
 
 
-
+<!-- Contact-->
 
 <section id="contact">
 
@@ -1355,49 +1355,86 @@ Visit Live Site
         <h2>Let's Work Together</h2>
 
         <p>
-            Every business is different, and so is every project. Share your ideas, ask questions, or request a custom quote. I'd love to hear what you're creating.
+            Have a question about my services or want to discuss an idea? Send me a message below. If you're ready to start a project, you can also complete my detailed inquiry form.
         </p>
 
         <div class="cta-divider"></div>
 
-        <div class="contact-options">
+        <!-- CONTACT FORM -->
 
-            <!-- QUOTE -->
+        <form class="contact-form"
+              action="https://formsubmit.co/thedigitalworkshop1@gmail.com"
+              method="POST">
 
-            <div class="contact-card">
+            <!-- FormSubmit Settings -->
 
-                <h3>Request a Quote</h3>
+            <input type="hidden" name="_subject" value="New Message from The Digital Workshop Website">
 
-                <p>
-                    Ready to start your project? Complete the inquiry form with a few details about your business and goals. I'll review everything and get back to you within 24–48 business hours.
-                </p>
+            <input type="hidden" name="_captcha" value="false">
 
-                <a class="button"
-                   href="https://form.jotform.com/261854913472059"
-                   target="_blank">
-                    Open Inquiry Form
-                </a>
+            <input type="hidden" name="_template" value="table">
 
+            <!-- NAME -->
+
+            <div class="form-group">
+                <label>Name</label>
+                <input
+                    type="text"
+                    name="Name"
+                    placeholder="Your Name"
+                    required>
             </div>
 
             <!-- EMAIL -->
 
-            <div class="contact-card">
-
-                <h3>Email Me</h3>
-
-                <p>
-                    Have a quick question or just want to connect? Feel free to send me an email anytime, and I'll be happy to help.
-                </p>
-
-                <a class="button secondary-cta"
-                   href="mailto:thedigitalworkshop1@gmail.com">
-                    thedigitalworkshop1@gmail.com
-                </a>
-
+            <div class="form-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="Email"
+                    placeholder="Your Email"
+                    required>
             </div>
 
-        </div>
+            <!-- SUBJECT -->
+
+            <div class="form-group">
+                <label>Subject</label>
+                <input
+                    type="text"
+                    name="Subject"
+                    placeholder="How can I help?">
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea
+                    name="Message"
+                    placeholder="Tell me about your project..."
+                    required></textarea>
+            </div>
+
+            <button type="submit" class="button primary-cta">
+                Send Message
+            </button>
+
+        </form>
+
+        <div class="cta-divider"></div>
+
+        <h3>Need a Detailed Quote?</h3>
+
+        <p>
+            If you're requesting a website, redesign, or another custom service, complete my project inquiry form so I can prepare a personalized quote.
+        </p>
+
+        <a class="button secondary-cta"
+           href="https://form.jotform.com/261854913472059"
+           target="_blank">
+            Open Project Inquiry Form
+        </a>
 
     </div>
 
